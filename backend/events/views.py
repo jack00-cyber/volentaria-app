@@ -97,11 +97,8 @@ class ParticiperEvenementView(generics.CreateAPIView):
             )
 
         individu = get_object_or_404(
-            __import__(
-                'accounts.models',
-                fromlist=['Individu']
-            ).Individu,
-            user=user
+         Individu,
+         user=user
         )
 
         evenement = get_object_or_404(
